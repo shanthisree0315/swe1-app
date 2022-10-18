@@ -1,3 +1,19 @@
 language: python
-rvm:
- - 3.7
+
+python:
+  - 3.7.1
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput
+
+script:
+  - black --check --exclude migrations .
+  - flake8 .
+  - coverage run --source=swe1,polls manage.py test
+
+after_script:
+  - coveralls

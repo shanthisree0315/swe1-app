@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-0i&)*83nd=d)^+@@b(i1aa3!8n)#xla3ys=00c*v@f%s17h9hx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-dev.eba-rzfhfxp7.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1','django-dev.eba-rzfhfxp7.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -54,15 +54,15 @@ ROOT_URLCONF = "mysite.urls"
 
 TEMPLATES = [
     {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
-        "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },
