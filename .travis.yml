@@ -21,7 +21,7 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   region: "us-east-1"
   app: "swe1-app"
-  env: "django-dev"
+  env: "django-env"
   bucket_name: "elasticbeanstalk-us-east-1-920848894865"
   on:
       branch: main
