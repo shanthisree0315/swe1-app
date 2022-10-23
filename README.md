@@ -1,5 +1,7 @@
 # Django Tuorial Application
 
+http://django-env.eba-8pdqejvs.us-east-1.elasticbeanstalk.com/
+
 Learning Django 
 Part of Software engineering course at NYU.
 
